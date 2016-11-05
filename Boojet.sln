@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boojet", "Boojet\Boojet.csproj", "{2C231B3C-F447-48D3-A1FC-4C152C950D58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boojet.Tests", "Boojet.Tests\Boojet.Tests.csproj", "{7F58E026-AAE4-44AC-88F0-7548DB591305}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C231B3C-F447-48D3-A1FC-4C152C950D58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C231B3C-F447-48D3-A1FC-4C152C950D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C231B3C-F447-48D3-A1FC-4C152C950D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C231B3C-F447-48D3-A1FC-4C152C950D58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F58E026-AAE4-44AC-88F0-7548DB591305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F58E026-AAE4-44AC-88F0-7548DB591305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F58E026-AAE4-44AC-88F0-7548DB591305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F58E026-AAE4-44AC-88F0-7548DB591305}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
