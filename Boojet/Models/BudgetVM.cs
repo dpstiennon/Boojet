@@ -1,6 +1,6 @@
 ﻿namespace Boojet.Models
 {
-    public class TModel
+    public class BudgetVM
     {
     }
 }
