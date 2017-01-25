@@ -31,9 +31,18 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="well" ng-controller="RecurringController as recurring">
-                    <span>Amount:{{recurring.items[0].Amount}}</span>
-                    <span>:{{recurring.items[0].Name}}</span>
-
+                    <h2>Recurring Expenses</h2>
+                    <div ng-repeat="item in recurring.items">
+                        <div class="form-group row">
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" value="{{item.Name}}"/>
+                            </div>
+                            <div class="col-xs-4 input-group">
+                                <span class="input-group-addon">$</span>
+                                <input type="text" class="form-control" value="{{item.Amount}}"/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="well">
                     more stuff
