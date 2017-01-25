@@ -1,7 +1,7 @@
 ﻿@model Boojet.Models.BudgetVM
 
-@{
-    Layout = null;
+@section scripts{
+    <script src="~/Scripts/ngControllers/app.js"></script>
 }
 
 <!DOCTYPE html>
@@ -11,6 +11,51 @@
     <title>title</title>
 </head>
 <body>
-    <nav class="navbar"></nav>
+<div ng-app="boojet">
+    <nav class="money-green navbar navbar-default navbar-static-top">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li id="calendar" class="header-icon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </li>
+                <li id="month-nav">
+
+                </li>
+                <li id="settings" class="header-icon nav navbar-right">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="well" ng-controller="RecurringController as recurring">
+                    <span>Amount:{{recurring.items[0].Amount}}</span>
+                    <span>:{{recurring.items[0].Name}}</span>
+
+                </div>
+                <div class="well">
+                    more stuff
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="well">
+                    stuff
+                </div>
+                <div class="well">
+                    more stuff
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="well">
+                    even more stuff
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
