@@ -1,7 +1,7 @@
 ﻿@model Boojet.Models.BudgetVM
 
 @section scripts{
-    <script src="~/Scripts/ngControllers/app.js"></script>
+    <script src="~/Scripts/Controllers/app.js"></script>
 }
 
 <!DOCTYPE html>
@@ -35,21 +35,42 @@
                     <div ng-repeat="item in recurring.items">
                         <div class="form-group row">
                             <div class="col-xs-8">
-                                <input type="text" class="form-control" value="{{item.Name}}"/>
+                                <input type="text" class="form-control" ng-model="item.name"/>
                             </div>
                             <div class="col-xs-4 input-group">
                                 <span class="input-group-addon">$</span>
-                                <input type="text" class="form-control" value="{{item.Amount}}"/>
+                                <input type="number" class="form-control" ng-model="item.amount"/>
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <h3>Total</h3>
+                        {{recurring.total() | currency}}
+                    </div>
                 </div>
-                <div class="well">
-                    more stuff
+                <div class="well" ng-controller="IncomeController as income">
+                    <h2>Income</h2>
+                    <div ng-repeat="source in income.sources">
+                        <div class="form-group row">
+                            <div class="col-xs-4">
+                                <input type="text" class="form-control" ng-model="source.name"  />
+                            </div>
+                            <div class="col-xs-4">
+                                <select class="form-control" >
+                                    <option ng-repeat="freq in income.frequencies" value="freq.id">{{freq.name}}</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-4 input-group">
+                                <span class="input-group-addon">$</span>
+                                <input type="number" class="form-control" ng-model="source.amount"/>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="well">
+                <div class="well" ng-controller="IncomeController as income">
                     stuff
                 </div>
                 <div class="well">
