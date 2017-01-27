@@ -36,19 +36,35 @@ textarea {
 .calendar {
     display: inline-block;
     text-align: center;
-    width: 800px;
+    max-width: 900px;
 }
 
 
 .calendar-link {
     margin-top: 20px;
-
-    max-width: 7.5%;
+    max-width: 8.3%;
     display: inline-block;
     padding: 1px;
     border-width: 0 3px 6px 3px;
     border-style: solid;
     border-color: #aaa;
+    color: #aaa;
+}
+
+.calendar-link h3 {
+    padding: 4px;
+    margin: 4px;
+}
+.calendar-link.active {
+    color: #006400;
+    background-color: #aaa;
+}
+
+.cal-button {
+    width: 30px;
+    height: 50px;
+    background-color: #aaa;
+    margin-top: 30px;
 }
 
 .nav-main-list {
