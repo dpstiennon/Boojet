@@ -1,9 +1,7 @@
-﻿<div>
-    <h1>Calendar goes here!</h1> 
-    <div>
-        Year: {{calendarCtrl.year}}
-    </div>
-    <div>
-        Month: {{calendarCtrl.month}}
-    </div>
+﻿<div class="calendar">
+    <ul>
+        <li ng-repeat="date in calendarCtrl.dates" class="calendar-link">
+            Year:{{date.year}}, Month:{{date.month}}
+        </li>
+    </ul>
 </div>

@@ -1,4 +1,6 @@
 ﻿(function() {
+    angular.module('boojet').controller('RecurringController', recurringController);
+
     function recurringController() {
         this.items = recurrings;
     }
@@ -20,5 +22,4 @@
             amount: 75.05
         }
     ];
-    angular.module('boojet', []).controller('RecurringController', function(){});
 })();

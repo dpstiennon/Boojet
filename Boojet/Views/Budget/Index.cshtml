@@ -1,10 +1,11 @@
 ﻿@model Boojet.Models.BudgetVM
 
 @section scripts{
+    <script src="~/Scripts/Models/CalDate.js"></script>
     <script src="~/Scripts/Controllers/app.js"></script>
-<script src="~/Scripts/Controllers/calendarController.js"></script>
-<script src="~/Scripts/Controllers/RecurringController.js"></script>
-<script src="~/Scripts/Directives/Calendar.js"></script>
+    <script src="~/Scripts/Controllers/calendarController.js"></script>
+    <script src="~/Scripts/Controllers/RecurringController.js"></script>
+    <script src="~/Scripts/Directives/Calendar.js"></script>
 }
 
 <!DOCTYPE html>
@@ -17,16 +18,18 @@
 <div ng-app="boojet">
     <nav class="money-green navbar navbar-default navbar-static-top">
         <div class="container">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav nav-main-list">
                 <li id="calendar" class="header-icon">
                     <span class="glyphicon glyphicon-calendar"></span>
                 </li>
-                <li id="month-nav">
-                    <calendar></calendar>
+                <li>
+                    <calendar year="2017" month="2"></calendar>
                 </li>
-                <li id="settings" class="header-icon nav navbar-right">
-                    <span class="glyphicon glyphicon-cog"></span>
-                </li>
+                <ul class="navbar-nav navbar-right">
+                    <li id="settings" class="header-icon">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </li>
+                </ul>
             </ul>
         </div>
     </nav>
@@ -56,10 +59,10 @@
                     <div ng-repeat="source in income.sources">
                         <div class="form-group row">
                             <div class="col-xs-4">
-                                <input type="text" class="form-control" ng-model="source.name"  />
+                                <input type="text" class="form-control" ng-model="source.name"/>
                             </div>
                             <div class="col-xs-4">
-                                <select class="form-control" >
+                                <select class="form-control">
                                     <option ng-repeat="freq in income.frequencies" value="freq.id">{{freq.name}}</option>
                                 </select>
                             </div>

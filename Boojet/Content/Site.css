@@ -27,3 +27,30 @@ textarea {
     color: #aaa ;
     font-size: 40pt;
 }
+
+.nav li {
+    display: inline-block;
+}
+
+
+.calendar {
+    display: inline-block;
+    width: 900px;
+}
+
+.calendar > ul {
+    
+}
+
+.calendar-link {
+    max-width: 7.5%;
+    display: inline-block;
+    padding: 1px;
+    border-width: 0 3px 6px 3px;
+    border-style: solid;
+    border-color: #aaa;
+}
+
+.nav-main-list {
+    width: 100%;
+}
