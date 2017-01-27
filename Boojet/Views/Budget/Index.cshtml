@@ -2,6 +2,9 @@
 
 @section scripts{
     <script src="~/Scripts/Controllers/app.js"></script>
+<script src="~/Scripts/Controllers/calendarController.js"></script>
+<script src="~/Scripts/Controllers/RecurringController.js"></script>
+<script src="~/Scripts/Directives/Calendar.js"></script>
 }
 
 <!DOCTYPE html>
@@ -19,7 +22,7 @@
                     <span class="glyphicon glyphicon-calendar"></span>
                 </li>
                 <li id="month-nav">
-
+                    <calendar></calendar>
                 </li>
                 <li id="settings" class="header-icon nav navbar-right">
                     <span class="glyphicon glyphicon-cog"></span>

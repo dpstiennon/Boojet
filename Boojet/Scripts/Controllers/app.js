@@ -1,14 +1,14 @@
 ﻿(function() {
     const app = angular.module("boojet", []);
-    app.controller("RecurringController",
-        function() {
-            this.items = recurrings;
-            this.total = function() {
-                return _.reduce(this.items,
-                    function (memo, item) { return memo + Number(item.amount) },
-                    0);
-            };
-        });
+//    app.controller("RecurringController",
+//        function() {
+//            this.items = recurrings;
+//            this.total = function() {
+//                return _.reduce(this.items,
+//                    function (memo, item) { return memo + Number(item.amount) },
+//                    0);
+//            };
+//        });
 
     app.controller("IncomeController",
         function() {
@@ -26,17 +26,6 @@
             name: "David Paycheck",
             Recurring: 3,
             amount: 1125.00
-        }
-    ];
-
-    const recurrings = [
-        {
-            name: "Electric",
-            amount: 53.56
-        },
-        {
-            name: "Student Loan",
-            amount: 75.05
         }
     ];
 
