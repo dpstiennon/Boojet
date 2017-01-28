@@ -6,6 +6,7 @@
     <script src="~/Scripts/Controllers/calendarController.js"></script>
     <script src="~/Scripts/Controllers/RecurringController.js"></script>
     <script src="~/Scripts/Directives/Calendar.js"></script>
+    <script src="~/Scripts/Directives/RecurringExpenses.js"></script>
 }
 
 <!DOCTYPE html>
@@ -36,24 +37,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <div class="well" ng-controller="RecurringController as recurring">
-                    <h2>Recurring Expenses</h2>
-                    <div ng-repeat="item in recurring.items">
-                        <div class="form-group row">
-                            <div class="col-xs-8">
-                                <input type="text" class="form-control" ng-model="item.name"/>
-                            </div>
-                            <div class="col-xs-4 input-group">
-                                <span class="input-group-addon">$</span>
-                                <input type="number" class="form-control" ng-model="item.amount"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <h3>Total</h3>
-                        {{recurring.total() | currency}}
-                    </div>
-                </div>
+                <recurring-expenses  ></recurring-expenses>
                 <div class="well" ng-controller="IncomeController as income">
                     <h2>Income</h2>
                     <div ng-repeat="source in income.sources">
