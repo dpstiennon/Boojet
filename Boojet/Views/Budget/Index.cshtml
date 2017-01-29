@@ -2,6 +2,7 @@
 
 @section scripts{
     <script src="~/Scripts/Models/CalDate.js"></script>
+    <script src="~/Scripts/Models/recurringItem.js"></script>
     <script src="~/Scripts/Controllers/app.js"></script>
     <script src="~/Scripts/Controllers/calendarController.js"></script>
     <script src="~/Scripts/Controllers/RecurringController.js"></script>
@@ -46,8 +47,9 @@
                                 <input type="text" class="form-control" ng-model="source.name"/>
                             </div>
                             <div class="col-xs-4">
-                                <select class="form-control">
-                                    <option ng-repeat="freq in income.frequencies" value="freq.id">{{freq.name}}</option>
+                                <select class="form-control"
+                                        ng-model="source.freqId"
+                                        ng-options="f.id as f.name for f in source.frequencies">
                                 </select>
                             </div>
                             <div class="col-xs-4 input-group">
@@ -56,11 +58,13 @@
                             </div>
                         </div>
                     </div>
-
+                    <div>
+                        <span>Total: {{income.total() | currency}}</span>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="well" ng-controller="IncomeController as income">
+                <div class="well" >
                     stuff
                 </div>
                 <div class="well">

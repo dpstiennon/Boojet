@@ -2,8 +2,9 @@
     <h2>Recurring Expenses</h2>
     <div ng-repeat="item in recurringCtrl.items">
         <div class="form-group row">
-            <div class="col-xs-8">
+            <div class="col-xs-6 input-group">
                 <input type="text" class="form-control" ng-model="item.name"/>
+                <span class="input-group-addon glyphicon glyphicon-trash"></span>
             </div>
             <div class="col-xs-4 input-group">
                 <span class="input-group-addon">$</span>
