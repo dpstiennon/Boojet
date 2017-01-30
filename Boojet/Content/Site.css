@@ -70,3 +70,31 @@ textarea {
 .nav-main-list {
     width: 100%;
 }
+
+.input-row {
+    position: relative;
+}
+
+.input-row:hover .floating-buttons {
+    visibility: visible;
+}
+
+.tongue {
+    position: absolute;
+    left: -120px;
+    width: 150px;
+    height: 40px;
+    background-color: #000;
+    opacity: 0;
+}
+
+
+.floating-buttons {
+    visibility: hidden;
+    position: absolute;
+    left: -80px;
+    top: 2px;
+    width: 20px;
+    z-index: 99
+}
+

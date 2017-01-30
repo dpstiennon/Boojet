@@ -1,12 +1,17 @@
 ﻿<div class="well">
     <h2>Recurring Expenses</h2>
-    <div ng-repeat="item in recurringCtrl.items">
-        <div class="form-group row">
-            <div class="col-xs-6 input-group">
-                <input type="text" class="form-control" ng-model="item.name"/>
-                <span class="input-group-addon glyphicon glyphicon-trash"></span>
+    <div ng-repeat="item in recurringCtrl.items" >
+        <div class="form-group row input-row">
+            <div class="input-group-sm floating-buttons hidden-xs">
+                <span class="input-group-addon glyphicon glyphicon-arrow-up"></span>
+                <span class="input-group-addon glyphicon glyphicon-arrow-down"></span>
             </div>
-            <div class="col-xs-4 input-group">
+            <div class="tongue">Lorem Ipsum dolor sit amet</div>
+            <div class="col-xs-6 input-group">
+                <span class="input-group-addon glyphicon glyphicon-trash"></span>
+                <input type="text" class="form-control" ng-model="item.name"/>
+            </div>
+            <div class="col-xs-3 input-group">
                 <span class="input-group-addon">$</span>
                 <input type="number" class="form-control" ng-model="item.amount"/>
             </div>
