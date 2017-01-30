@@ -3,12 +3,15 @@
     <div ng-repeat="item in recurringCtrl.items" >
         <div class="form-group row input-row">
             <div class="input-group-sm floating-buttons hidden-xs">
-                <span class="input-group-addon glyphicon glyphicon-arrow-up"></span>
-                <span class="input-group-addon glyphicon glyphicon-arrow-down"></span>
+                <span ng-click="recurringCtrl.moveUp($index)"
+                      class="input-group-addon glyphicon glyphicon-arrow-up"></span>
+                <span ng-click="recurringCtrl.moveDown($index)"
+                      class="input-group-addon glyphicon glyphicon-arrow-down"></span>
             </div>
-            <div class="tongue">Lorem Ipsum dolor sit amet</div>
+            <div class="tongue"></div>
             <div class="col-xs-6 input-group">
-                <span class="input-group-addon glyphicon glyphicon-trash"></span>
+                <span ng-click="recurringCtrl.delete($index)"
+                      class="input-group-addon glyphicon glyphicon-trash"></span>
                 <input type="text" class="form-control" ng-model="item.name"/>
             </div>
             <div class="col-xs-3 input-group">

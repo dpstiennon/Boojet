@@ -98,3 +98,7 @@ textarea {
     z-index: 99
 }
 
+.input-row .floating-buttons span:hover, .input-row .glyphicon-trash:hover {
+    background-color: #aaa;
+}
+
