@@ -22,12 +22,17 @@
         this.items[index + 1] = temp;
     }
 
-    recurringController.prototype.moveUp= function (index) {
+    recurringController.prototype.moveUp = function (index) {
         if (index <= 0) { return; }
         var temp = this.items[index];
         this.items[index] = this.items[index - 1];
         this.items[index - 1] = temp;
     }
+
+    recurringController.prototype.add = function() {
+        this.items.push(new RecurringItem("", 0.0, 3));
+
+    };
 
     const recurrings = [
         {

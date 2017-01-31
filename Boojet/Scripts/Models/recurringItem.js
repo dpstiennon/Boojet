@@ -17,7 +17,7 @@ Frequency = function (name, id, timesPerMonth) {
     this.name = name;
     this.id = id;
     this.timesPerMonth = timesPerMonth;
-};;
+};
 
 RecurringItem.prototype.frequencies = [
     { name: "One-Time", id: 0, timesPerMonth: 1 },

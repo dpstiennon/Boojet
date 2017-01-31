@@ -201,8 +201,10 @@
     <Content Include="Scripts\angular.min.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Controllers\calendarController.js" />
+    <Content Include="Scripts\Controllers\IrregularsController.js" />
     <Content Include="Scripts\Controllers\RecurringController.js" />
     <Content Include="Scripts\Directives\Calendar.js" />
+    <Content Include="Scripts\Directives\Irregulars.js" />
     <Content Include="Scripts\Directives\RecurringExpenses.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -216,12 +218,14 @@
     <Content Include="Scripts\lodash.js" />
     <Content Include="Scripts\lodash.min.js" />
     <Content Include="Scripts\Models\CalDate.js" />
+    <Content Include="Scripts\Models\moneyItem.js" />
     <Content Include="Scripts\Models\recurringItem.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\Controllers\app.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\Templates\Calendar.html" />
+    <Content Include="Scripts\Templates\Irregulars.html" />
     <Content Include="Scripts\Templates\RecurringExpenses.html" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />

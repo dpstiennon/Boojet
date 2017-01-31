@@ -5,9 +5,11 @@
     <script src="~/Scripts/Models/recurringItem.js"></script>
     <script src="~/Scripts/Controllers/app.js"></script>
     <script src="~/Scripts/Controllers/calendarController.js"></script>
+    <script src="~/Scripts/Controllers/IrregularsController.js"></script>
     <script src="~/Scripts/Controllers/RecurringController.js"></script>
     <script src="~/Scripts/Directives/Calendar.js"></script>
     <script src="~/Scripts/Directives/RecurringExpenses.js"></script>
+    <script src="~/Scripts/Directives/Irregulars.js"></script>
 }
 
 <!DOCTYPE html>
@@ -38,7 +40,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <recurring-expenses  ></recurring-expenses>
+                <recurring-expenses ></recurring-expenses>
                 <div class="well" ng-controller="IncomeController as income">
                     <h2>Income</h2>
                     <div ng-repeat="source in income.sources">
@@ -64,12 +66,10 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="well" >
-                    stuff
-                </div>
                 <div class="well">
-                    more stuff
+                    <budgets></budgets>
                 </div>
+                    <irregulars></irregulars>
             </div>
         </div>
         <div class="row">

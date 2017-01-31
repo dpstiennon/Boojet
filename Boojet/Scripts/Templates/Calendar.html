@@ -1,10 +1,14 @@
 ﻿<ul class="navbar-nav calendar hidden-xs">
-    <li class="cal-button cal-button-left" ng-click="calendarCtrl.scrollLeft()"></li>
+    <li class="cal-button cal-button-left " ng-click="calendarCtrl.scrollLeft()">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </li>
     <li ng-repeat="date in calendarCtrl.dates" class="calendar-link">
         <a ng-href="/budget/{{date.getFullYear()}}/{{date.getMonth() + 1}}">
             <h3>{{calendarCtrl.monthString(date)}}</h3>
             {{date.getFullYear()}}
         </a>
     </li>
-    <li class="cal-button cal-button-right" ng-click="calendarCtrl.scrollRight()"></li>
+    <li class="cal-button cal-button-right glyphicon " ng-click="calendarCtrl.scrollRight()">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </li>
 </ul>
