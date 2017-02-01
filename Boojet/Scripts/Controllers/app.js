@@ -16,6 +16,8 @@
     app.controller("IncomeController", controller);
 
 
+
+
     const incomes = [
         new RecurringItem("Amy Paycheck", 1549.88, 3),
         new RecurringItem( "David Paycheck", 1125.00, 1)
