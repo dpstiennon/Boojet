@@ -1,7 +1,7 @@
 ﻿RecurringItem = function(name, amount, freqId) {
     this.name = name;
     this.amount = amount;
-    this.freqId = freqId;
+    this.freqId = freqId || 0;
 };
 
 RecurringItem.prototype.monthlyAmount = function() {

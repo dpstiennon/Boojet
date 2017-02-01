@@ -1,0 +1,27 @@
+﻿<div class="well">
+    <h2>Budgets</h2>
+    <div ng-repeat="item in budgetsCtrl.items">
+        <div class="form-group row input-row">
+            <div class="input-group-sm floating-buttons hidden-xs">
+                <span ng-click="budgetsCtrl.moveUp($index)"
+                      class="input-group-addon glyphicon glyphicon-arrow-up"></span>
+                <span ng-click="budgetsCtrl.moveDown($index)"
+                      class="input-group-addon glyphicon glyphicon-arrow-down"></span>
+            </div>
+            <div class="tongue"></div>
+            <div class="col-xs-6 input-group">
+                <span ng-click="budgetsCtrl.delete($index)"
+                      class="input-group-addon glyphicon glyphicon-trash"></span>
+                <input type="text" class="form-control" ng-model="item.name" />
+            </div>
+            <div class="col-xs-3 input-group">
+                <span class="input-group-addon">$</span>
+                <input type="number" class="form-control" ng-model="item.amount" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h3>Total</h3>
+        {{budgetsCtrl.total() | currency}}
+    </div>
+</div>
