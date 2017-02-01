@@ -6,8 +6,9 @@
             controller: 'TotalsController',
             controllerAs: 'totalsCtrl',
             scope: {
-                totals: '@'
-            }
+                totals: '='
+            },
+            bindToController: true
         };
     });
 
