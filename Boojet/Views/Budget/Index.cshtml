@@ -31,7 +31,7 @@
     <div class="container" ng-controller="FinanceController as financeCtrl">
         <div class="row">
             <div class="col-md-6">
-                <recurring-expenses sum="budgetingCtrl.totalRegulars"></recurring-expenses>
+                <recurring-expenses sum="financeCtrl.totalRegulars"></recurring-expenses>
                 <div class="well" ng-controller="IncomeController as income">
                     <h2>Income</h2>
                     <div ng-repeat="source in income.sources">
@@ -58,12 +58,12 @@
             </div>
             <div class="col-md-6">
                     <budgets sum="financeCtrl.totalBudgets"></budgets>
-                    <irregulars></irregulars>
+                    <irregulars sum="financeCtrl.totalIrregulars"></irregulars>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <totals totals="financeCtrl.totalBudgets"></totals>
+                <totals totals="financeCtrl.getTotals()"></totals>
             </div>
         </div>
     </div>

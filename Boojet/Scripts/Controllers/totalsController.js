@@ -1,12 +1,17 @@
 ﻿(function() {
     var totalsController = function() {
-//        this.budgeted = this.totals.regulars;
-//        this.income = this.totals.incomes;
-//        this.irregular = this.totals.irregulars;
+    };
+
+    totalsController.prototype.budgeted = function() {
+    	var t = this.totals;
+        return t.budgets + t.regulars;
+
     };
 
     totalsController.prototype.grandTotal = function() {
-        return this.totals;
+    	var t = this.totals;
+        return t.incomes - t.budgets - t.regulars - t.irregulars;
+
     };
 
     angular.module('boojet').controller('TotalsController',  totalsController);

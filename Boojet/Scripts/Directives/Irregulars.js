@@ -7,7 +7,11 @@
                     templateUrl: '/Scripts/Templates/Irregulars.html',
                     controller: 'IrregularsController',
                     controllerAs: 'irregularsCtrl',
-                    replace: true
+                    replace: true,
+                    scope: {
+                        sum: '='
+                    },
+                    bindToController: true
                 };
             });
 })();
