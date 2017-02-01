@@ -1,3 +1,19 @@
 ﻿<div class="well">
-    even more stuff {{totalsCtrl.totals}}
+    <h3 class="total-heading">Total</h3>
+    <div class="totals">
+        <div>
+            <span>Income: </span><span class="positive-money"></span>
+        </div>
+        <div>
+            <span>Budgeted Expenses: </span><span class="negative-money"></span>
+        </div>
+        <div>
+            <span>Irregular Expenses: </span> <span class="negative-money">{{totalsCtrl.totals}}</span>
+        </div>
+        <hr/>
+        <div>
+            <span>Grand Total: </span><span ></span>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
 </div>

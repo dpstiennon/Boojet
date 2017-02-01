@@ -108,3 +108,18 @@ textarea {
     background-color: #aaa;
 }
 
+.totals {
+    float: right;
+}
+
+.total-heading {
+    float: left;
+}
+
+.positive-money {
+    color: #006400;
+}
+
+.negative-money {
+    color: red;
+}
