@@ -8,7 +8,11 @@
                     templateUrl: '/Scripts/Templates/RecurringExpenses.html',
                     controller: 'RecurringController',
                     controllerAs: 'recurringCtrl',
-                    replace: true
-                };
+                    replace: true,
+                    scope: {
+                        sum: '='
+                    },
+                    bindToController: true
+            };
             });
 })();

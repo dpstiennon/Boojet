@@ -6,9 +6,10 @@
     }
 
     recurringController.prototype.total = function () {
-        return _.reduce(this.items,
+        this.sum = _.reduce(this.items,
             function (memo, item) { return memo + Number(item.amount) },
             0);
+        return this.sum;
     }
 
     recurringController.prototype.delete = function(index) {

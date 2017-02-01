@@ -29,6 +29,10 @@ namespace Boojet
             bundles.Add(new ScriptBundle("~/bundles/angular").Include("~/Scripts/angular.js", "~/Scripts/angular-mocks.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/lodash").Include("~/Scripts/lodash.js", "~/Scripts/lodash.min.js"));
+            bundles.Add(new ScriptBundle("~/bundles/app")
+                .IncludeDirectory("~/Scripts/Models", "*.js")
+                .IncludeDirectory("~/Scripts/Controllers", "*.js")
+                .IncludeDirectory("~/Scripts/Directives", "*.js"));
         }
     }
 }

@@ -1,18 +1,6 @@
 ﻿@model Boojet.Models.BudgetVM
 
 @section scripts{
-    <script src="~/Scripts/Models/CalDate.js"></script>
-    <script src="~/Scripts/Models/recurringItem.js"></script>
-    <script src="~/Scripts/Controllers/app.js"></script>
-    <script src="~/Scripts/Controllers/budgetingController.js"></script>
-    <script src="~/Scripts/Controllers/calendarController.js"></script>
-    <script src="~/Scripts/Controllers/IrregularsController.js"></script>
-    <script src="~/Scripts/Controllers/RecurringController.js"></script>
-    <script src="~/Scripts/Controllers/totalsController.js"></script>
-    <script src="~/Scripts/Directives/Calendar.js"></script>
-    <script src="~/Scripts/Directives/RecurringExpenses.js"></script>
-    <script src="~/Scripts/Directives/Irregulars.js"></script>
-    <script src="~/Scripts/Directives/Totals.js"></script>
 }
 
 <!DOCTYPE html>
@@ -43,7 +31,7 @@
     <div class="container" ng-controller="BudgetingController as budgetingCtrl">
         <div class="row">
             <div class="col-md-6">
-                <recurring-expenses ></recurring-expenses>
+                <recurring-expenses sum="budgetingCtrl.totalRegulars"></recurring-expenses>
                 <div class="well" ng-controller="IncomeController as income">
                     <h2>Income</h2>
                     <div ng-repeat="source in income.sources">
