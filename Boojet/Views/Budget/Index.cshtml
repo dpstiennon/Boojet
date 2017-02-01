@@ -28,7 +28,7 @@
             </ul>
         </div>
     </nav>
-    <div class="container" ng-controller="BudgetingController as budgetingCtrl">
+    <div class="container" ng-controller="FinanceController as financeCtrl">
         <div class="row">
             <div class="col-md-6">
                 <recurring-expenses sum="budgetingCtrl.totalRegulars"></recurring-expenses>
@@ -65,7 +65,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <totals totals="budgetingCtrl.totals"></totals>
+                <totals totals="financeCtrl.totals"></totals>
             </div>
         </div>
     </div>

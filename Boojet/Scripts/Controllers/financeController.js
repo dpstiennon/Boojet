@@ -1,5 +1,5 @@
 ﻿(function() {
-    var budgetingController = function() {
+    var FinanceController = function() {
         this.totalRegulars = 3;
         this.totalIrregulars = 4;
         this.totalBudgets = 5;
@@ -12,5 +12,5 @@
         }
     };
 
-    angular.module('boojet').controller('BudgetingController', budgetingController);
+    angular.module('boojet').controller('FinanceController', FinanceController);
 })();

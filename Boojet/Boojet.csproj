@@ -199,7 +199,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
-    <Content Include="Scripts\Controllers\budgetingController.js" />
+    <Content Include="Scripts\Controllers\financeController.js" />
     <Content Include="Scripts\Controllers\totalsController.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Controllers\calendarController.js" />
