@@ -6,9 +6,9 @@
     }
 
     recurringController.prototype.total = function () {
-        this.sum = _.reduce(this.items,
-            function (memo, item) { return memo + Number(item.amount) },
-            0);
+        this.sum = _.reduce(this.items, function (memo, item) {
+            return memo + item.monthlyAmount();
+        }, 0);
         return this.sum;
     }
 
@@ -36,13 +36,7 @@
     };
 
     const recurrings = [
-        {
-            name: "Electric",
-            amount: 53.56
-        },
-        {
-            name: "Student Loan",
-            amount: 75.05
-        }
+        new RecurringItem('Electric', 55.42, 3),
+        new RecurringItem('Student Loans', 63.12, 3)
     ];
 })();

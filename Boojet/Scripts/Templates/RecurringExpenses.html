@@ -9,12 +9,18 @@
                       class="input-group-addon glyphicon glyphicon-arrow-down"></span>
             </div>
             <div class="tongue"></div>
-            <div class="col-xs-6 input-group">
+            <div class="col-xs-5 input-group">
                 <span ng-click="recurringCtrl.delete($index)"
                       class="input-group-addon glyphicon glyphicon-trash"></span>
                 <input type="text" class="form-control" ng-model="item.name"/>
             </div>
-            <div class="col-xs-3 input-group">
+            <div class="col-xs-3">
+                <select class="form-control"
+                        ng-model="item.freqId"
+                        ng-options="f.id as f.name for f in item.frequencies"></select>
+            </div>
+
+            <div class="col-xs-4 input-group">
                 <span class="input-group-addon">$</span>
                 <input type="number" class="form-control" ng-model="item.amount"/>
             </div>
