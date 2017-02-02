@@ -1,0 +1,22 @@
+﻿<div class="well">
+    <h2>Income</h2>
+    <div ng-repeat="source in incomesCtrl.sources">
+        <div class="form-group row">
+            <div class="col-xs-4">
+                <input type="text" class="form-control" ng-model="source.name" />
+            </div>
+            <div class="col-xs-4">
+                <select class="form-control"
+                        ng-model="source.freqId"
+                        ng-options="f.id as f.name for f in source.frequencies"></select>
+            </div>
+            <div class="col-xs-4 input-group">
+                <span class="input-group-addon">$</span>
+                <input type="number" class="form-control" ng-model="source.amount" />
+            </div>
+        </div>
+    </div>
+    <div>
+        <span>Total: {{incomesCtrl.total() | currency}}</span>
+    </div>
+</div>

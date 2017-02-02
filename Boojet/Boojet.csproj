@@ -203,11 +203,13 @@
     <Content Include="Scripts\Controllers\totalsController.js" />
     <Content Include="Scripts\Controllers\budgetsController.js" />
     <Content Include="Scripts\Directives\Budgets.js" />
+    <Content Include="Scripts\Controllers\incomesController.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Controllers\calendarController.js" />
     <Content Include="Scripts\Controllers\IrregularsController.js" />
     <Content Include="Scripts\Controllers\RecurringController.js" />
     <Content Include="Scripts\Directives\Calendar.js" />
+    <Content Include="Scripts\Directives\incomes.js" />
     <Content Include="Scripts\Directives\Irregulars.js" />
     <Content Include="Scripts\Directives\RecurringExpenses.js" />
     <Content Include="Scripts\Directives\Totals.js" />
@@ -231,6 +233,7 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\Templates\budgets.html" />
     <Content Include="Scripts\Templates\Calendar.html" />
+    <Content Include="Scripts\Templates\incomes.html" />
     <Content Include="Scripts\Templates\Irregulars.html" />
     <Content Include="Scripts\Templates\RecurringExpenses.html" />
     <Content Include="Scripts\Templates\totals.html" />

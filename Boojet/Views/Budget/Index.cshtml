@@ -32,29 +32,7 @@
         <div class="row">
             <div class="col-md-6">
                 <recurring-expenses sum="financeCtrl.totalRegulars"></recurring-expenses>
-                <div class="well" ng-controller="IncomeController as income">
-                    <h2>Income</h2>
-                    <div ng-repeat="source in income.sources">
-                        <div class="form-group row">
-                            <div class="col-xs-4">
-                                <input type="text" class="form-control" ng-model="source.name"/>
-                            </div>
-                            <div class="col-xs-4">
-                                <select class="form-control"
-                                        ng-model="source.freqId"
-                                        ng-options="f.id as f.name for f in source.frequencies">
-                                </select>
-                            </div>
-                            <div class="col-xs-4 input-group">
-                                <span class="input-group-addon">$</span>
-                                <input type="number" class="form-control" ng-model="source.amount"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <span>Total: {{income.total() | currency}}</span>
-                    </div>
-                </div>
+                <incomes sum="financeCtrl.totalIncomes" ></incomes>
             </div>
             <div class="col-md-6">
                     <budgets sum="financeCtrl.totalBudgets"></budgets>
