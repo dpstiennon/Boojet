@@ -1,3 +1,5 @@
+using Boojet.Models;
+
 namespace Boojet.Migrations
 {
     using System;
@@ -26,6 +28,7 @@ namespace Boojet.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            var david = new User();
         }
     }
 }

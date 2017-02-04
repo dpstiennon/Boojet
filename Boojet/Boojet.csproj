@@ -184,14 +184,21 @@
     <Compile Include="Migrations\201702032128054_initial.Designer.cs">
       <DependentUpon>201702032128054_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702042011493_BasicModel.cs" />
+    <Compile Include="Migrations\201702042011493_BasicModel.Designer.cs">
+      <DependentUpon>201702042011493_BasicModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Budget.cs" />
+    <Compile Include="Models\MonthlyBudget.cs" />
+    <Compile Include="Models\BudgetItem.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\BudgetVM.cs" />
-    <Compile Include="Models\MoneyItem.cs" />
-    <Compile Include="Enums\MoneyItemType.cs" />
+    <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Enums\TransactionType.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -299,6 +306,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201702032128054_initial.resx">
       <DependentUpon>201702032128054_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702042011493_BasicModel.resx">
+      <DependentUpon>201702042011493_BasicModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

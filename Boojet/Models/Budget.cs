@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Boojet.Models
 {
-    public class Budget
+    public  class Budget 
     {
-        public int Month { get; set; }
-        public int Year { get; set; }
-        public Guid UserId { get; set; }
-        public List<MoneyItem> MoneyItems { get; set; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public List<BudgetItem> BudgetItems { get; set; }
+        public decimal Target { get; set; }
 
+        public int Sequence { get; set; }
+        public Guid MonthlyBudgetId { get; set; }
+        
     }
 }

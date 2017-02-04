@@ -1,6 +1,6 @@
 ﻿namespace Boojet.Enums
 {
-    public enum MoneyItemType
+    public enum TransactionType
     {
         Income = 0,
         Recurring = 1,

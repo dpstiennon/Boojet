@@ -9,6 +9,10 @@ namespace Boojet.DAL
 {
     public class BudgetContext: DbContext
     {
-        public DbSet<MoneyItem> MoneyItems { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Budget> Budgets { get; set; }
+        public DbSet<BudgetItem> BudgetItems { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<MonthlyBudget> MonthlyBudgets { get; set; }
     }
 }
