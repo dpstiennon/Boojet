@@ -14,5 +14,7 @@ namespace Boojet.DAL
         public DbSet<BudgetItem> BudgetItems { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<MonthlyBudget> MonthlyBudgets { get; set; }
+
+
     }
 }
