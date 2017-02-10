@@ -34,9 +34,9 @@ namespace Boojet.Migrations
             {
                 FirstName = "David",
                 LastName = "Stiennon",
-                MonthlyBudgets = new List<MonthlyBudget>()
+                MonthlyBudgets = new List<MonthlyBoojet>()
                 {
-                    new MonthlyBudget
+                    new MonthlyBoojet
                     {
                         Month  = 12,
                         Year = 2016,
@@ -51,7 +51,7 @@ namespace Boojet.Migrations
                             }
                         }
                     },
-                    new MonthlyBudget
+                    new MonthlyBoojet
                     {
                         Month = 1,
                         Year = 2017,

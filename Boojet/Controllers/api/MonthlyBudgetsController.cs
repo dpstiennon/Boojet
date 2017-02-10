@@ -15,56 +15,56 @@ namespace Boojet.Controllers.api
     public class MonthlyBudgetsController : ApiController
     {
         private BudgetContext db = new BudgetContext();
-        private MonthlyBudgetRepo repo = new MonthlyBudgetRepo();
+        private BoojetRepo repo = new BoojetRepo();
 
 
         // GET: api/MonthlyBudgets
-        public IQueryable<MonthlyBudget> GetMonthlyBudgets()
+        public IQueryable<MonthlyBoojet> GetMonthlyBudgets()
         {
-            return db.MonthlyBudgets;
+            return db.MonthlyBoojets;
         }
 
         // GET: api/MonthlyBudgets/5
-        [ResponseType(typeof(MonthlyBudget))]
+        [ResponseType(typeof(MonthlyBoojet))]
         public IHttpActionResult GetMonthlyBudget(Guid userId, int month, int year)
         {
-            MonthlyBudget monthlyBudget = db.MonthlyBudgets.FirstOrDefault();
-            if (monthlyBudget == null)
+            MonthlyBoojet monthlyBoojet = db.MonthlyBoojets.FirstOrDefault();
+            if (monthlyBoojet == null)
             {
                 return NotFound();
             }
 
-            return Ok(monthlyBudget);
+            return Ok(monthlyBoojet);
         }
 
-        [ResponseType(typeof(List<Transaction>))]
-        public IHttpActionResult GetTransactions(Guid userId, int month, int year, TransactionType type)
-        {
-            return Ok(repo.LoadMonthlyBudget(userId, month, year).TransactionsByType(type));
-        }
-
-        [ResponseType(typeof(List<Transaction>))]
-        public IHttpActionResult GetTransactions()
-        {
-            return Ok(repo.LoadMonthlyBudget(new Guid("7ba81e78-c0ec-e611-b035-4c32758e1f0a"), 1, 2017).TransactionsByType(TransactionType.Recurring));
-        }
+//        [ResponseType(typeof(List<Transaction>))]
+//        public IHttpActionResult GetTransactions(Guid userId, int month, int year, TransactionType type)
+//        {
+//            return Ok(repo.LoadMonthlyBudget(userId, month, year).TransactionsByType(type));
+//        }
+//
+//        [ResponseType(typeof(List<Transaction>))]
+//        public IHttpActionResult GetTransactions()
+//        {
+//            return Ok(repo.LoadMonthlyBudget(new Guid("7ba81e78-c0ec-e611-b035-4c32758e1f0a"), 1, 2017).TransactionsByType(TransactionType.Recurring));
+//        }
 
 
         // PUT: api/MonthlyBudgets/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutMonthlyBudget(Guid id, MonthlyBudget monthlyBudget)
+        public IHttpActionResult PutMonthlyBudget(Guid id, MonthlyBoojet monthlyBoojet)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != monthlyBudget.Id)
+            if (id != monthlyBoojet.Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(monthlyBudget).State = EntityState.Modified;
+            db.Entry(monthlyBoojet).State = EntityState.Modified;
 
             try
             {
@@ -86,34 +86,34 @@ namespace Boojet.Controllers.api
         }
 
         // POST: api/MonthlyBudgets
-        [ResponseType(typeof(MonthlyBudget))]
-        public IHttpActionResult PostMonthlyBudget(MonthlyBudget monthlyBudget)
+        [ResponseType(typeof(MonthlyBoojet))]
+        public IHttpActionResult PostMonthlyBudget(MonthlyBoojet monthlyBoojet)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.MonthlyBudgets.Add(monthlyBudget);
+            db.MonthlyBoojets.Add(monthlyBoojet);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = monthlyBudget.Id }, monthlyBudget);
+            return CreatedAtRoute("DefaultApi", new { id = monthlyBoojet.Id }, monthlyBoojet);
         }
 
         // DELETE: api/MonthlyBudgets/5
-        [ResponseType(typeof(MonthlyBudget))]
+        [ResponseType(typeof(MonthlyBoojet))]
         public IHttpActionResult DeleteMonthlyBudget(Guid id)
         {
-            MonthlyBudget monthlyBudget = db.MonthlyBudgets.Find(id);
-            if (monthlyBudget == null)
+            MonthlyBoojet monthlyBoojet = db.MonthlyBoojets.Find(id);
+            if (monthlyBoojet == null)
             {
                 return NotFound();
             }
 
-            db.MonthlyBudgets.Remove(monthlyBudget);
+            db.MonthlyBoojets.Remove(monthlyBoojet);
             db.SaveChanges();
 
-            return Ok(monthlyBudget);
+            return Ok(monthlyBoojet);
         }
 
         protected override void Dispose(bool disposing)
@@ -127,7 +127,7 @@ namespace Boojet.Controllers.api
 
         private bool MonthlyBudgetExists(Guid id)
         {
-            return db.MonthlyBudgets.Count(e => e.Id == id) > 0;
+            return db.MonthlyBoojets.Count(e => e.Id == id) > 0;
         }
     }
 }

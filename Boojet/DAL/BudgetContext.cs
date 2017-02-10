@@ -13,7 +13,7 @@ namespace Boojet.DAL
         public DbSet<Budget> Budgets { get; set; }
         public DbSet<BudgetItem> BudgetItems { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<MonthlyBudget> MonthlyBudgets { get; set; }
+        public DbSet<MonthlyBoojet> MonthlyBoojets { get; set; }
 
 
     }

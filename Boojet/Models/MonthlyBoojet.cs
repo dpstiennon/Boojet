@@ -10,7 +10,7 @@ using Boojet.Enums;
 
 namespace Boojet.Models
 {
-    public class MonthlyBudget
+    public class MonthlyBoojet
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
@@ -26,7 +26,7 @@ namespace Boojet.Models
         [NotMapped]
         public List<Transaction> RegularExpenses => TransactionsByType(TransactionType.Recurring);
 
-        public MonthlyBudget()
+        public MonthlyBoojet()
         {
             Transactions = new List<Transaction>();
             Budgets = new List<Budget>();
@@ -34,9 +34,9 @@ namespace Boojet.Models
 
 
 
-        public MonthlyBudget CreateFrom(MonthlyBudget src, int month, int year)
+        public MonthlyBoojet CreateFrom(MonthlyBoojet src, int month, int year)
         {
-            return new MonthlyBudget()
+            return new MonthlyBoojet()
             {
                 Month = month,
                 Year = year

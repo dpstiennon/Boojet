@@ -13,7 +13,7 @@ namespace Boojet.Models
         public Guid Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public List<MonthlyBudget> MonthlyBudgets { get; set; }
+        public List<MonthlyBoojet> MonthlyBudgets { get; set; }
 
 
     }

@@ -9,7 +9,7 @@ namespace Boojet.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public List<BudgetItem> BudgetItems { get; set; }
+        public virtual List<BudgetItem> BudgetItems { get; set; }
         public decimal Target { get; set; }
 
         public int Sequence { get; set; }
