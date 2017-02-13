@@ -123,3 +123,47 @@ textarea {
 .negative-money {
     color: red;
 }
+
+.dollar-container {
+    position: relative;
+    min-height: 300px;
+}
+
+.dollar-container span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #006400;
+    position: absolute;
+}
+
+
+
+.dollar-1 {
+    top: -170px;
+    left: 20px;
+    font-size: 40em;
+    position: absolute;
+    transform: rotate(-30deg);
+}
+
+.dollar-2 {
+    top: -150px;
+    left: 190px;
+    font-size: 35em;
+    transform: rotate(-10deg);
+}
+
+
+.dollar-3 {
+    top: -110px;
+    left: 340px;
+    font-size: 30em;
+    transform: rotate(5deg);
+}
+
+.dollar-4 {
+    top: -50px;
+    left: 450px;
+    font-size: 25em;
+    transform: rotate(20deg);
+}

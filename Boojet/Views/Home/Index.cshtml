@@ -1,32 +1,32 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
-<div class="jumbotron">
-    <h1>Boojet</h1>
+<nav class="money-green navbar navbar-default navbar-static-top">
+    <h1 class="">Boojet</h1>
     <h3>Family Budgeting App</h3>
-</div>
+</nav>
 
-<div class="row">
-    <div class="col-md-4">
-        $$$$$$$
-    </div>
+<div class="row dollar-container">
+    <span class="dollar-1"> $ </span>
+    <span class="dollar-2"> $ </span>
+    <span class="dollar-3"> $ </span>
+    <span class="dollar-4"> $ </span>
 </div>
 <div class="row">
-    <div class="col-md-6">
-        <a href="#" class="btn btn-lg">Sign Up</a>
-    </div>
 
-    <div class="col-md-6">
+    <div class="col-md-offset-6 col-md-3">
         <h3>Sign In</h3>
         <div class="form-group">
-            <label for="username" class="form-control">Username</label>
-            <input name="username" type="text" class="form-control" value="" />
+            <label for="username" class="">Username</label>
+            <input name="username" type="text" class="form-control" value=""/>
         </div>
         <div class="form-group">
-            <label for="password" class="form-control">Password</label>
-            <input name="password" type="text" class="form-control" value="" />
+            <label for="password" class="">Password</label>
+            <input name="password" type="text" class="form-control" value=""/>
         </div>
-        </div>
+        <span>-or-</span>
+    </div>
+    <div class="col-md-3">
+        <a href="#" class="btn btn-lg money-green">Sign Up</a>
     </div>
 </div>
