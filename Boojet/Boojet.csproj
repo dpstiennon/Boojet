@@ -214,6 +214,10 @@
     <Compile Include="Migrations\201702101630551_UpdateTableName.Designer.cs">
       <DependentUpon>201702101630551_UpdateTableName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702131633384_emailPwd.cs" />
+    <Compile Include="Migrations\201702131633384_emailPwd.Designer.cs">
+      <DependentUpon>201702131633384_emailPwd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Budget.cs" />
@@ -341,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702101630551_UpdateTableName.resx">
       <DependentUpon>201702101630551_UpdateTableName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702131633384_emailPwd.resx">
+      <DependentUpon>201702131633384_emailPwd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
