@@ -30,5 +30,9 @@ namespace Boojet.DAL
 //
 //            }
 //        }
+        public User FindUser(string email, string password)
+        {
+            return new User() {FirstName = "David", LastName = "Stiennon"};
+        }
     }
 }

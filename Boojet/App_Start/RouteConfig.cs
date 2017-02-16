@@ -14,8 +14,8 @@ namespace Boojet
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
                 name: "Budget",
-                url: "Budget/{year}/{month}",
-                defaults: new {controller = "Budget", action="Index", year = UrlParameter.Optional, month = UrlParameter.Optional}
+                url: "Budget/{userId}/{year}/{month}",
+                defaults: new {controller = "Budget", action="Index"}
             );
 
             routes.MapRoute(
