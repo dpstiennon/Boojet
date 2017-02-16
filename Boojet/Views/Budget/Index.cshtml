@@ -11,7 +11,7 @@
 </head>
 <body>
 <div ng-app="boojet">
-    <nav class="money-green navbar navbar-default navbar-static-top">
+    <nav class="money-green navbar navbar-static-top">
         <div class="container">
                 <ul class="nav navbar-nav navbar-left">
                     <li id="calendar" class="header-icon">
@@ -21,7 +21,11 @@
                 <calendar year="2017" month="2"></calendar>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown header-icon">
-                        <span class="glyphicon glyphicon-cog"></span>
+                        <span class="glyphicon glyphicon-cog dropdown-toggle" data-toggle="dropdown"></span>
+                        <ul class="dropdown-menu">
+                            <li>Home</li>
+                            <li>About</li>
+                        </ul>
                     </li>
                 </ul>
             </div>

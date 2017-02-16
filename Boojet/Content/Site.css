@@ -9,7 +9,7 @@
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
-    white-space: normal;0
+    white-space: normal;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -24,11 +24,11 @@ textarea {
 }
 
 .header-icon span {
-    color: #aaa ;
+    color: #ccc ;
     font-size: 40pt;
 }
 
-.nav li {
+.calendar li {
     display: inline-block;
 }
 
@@ -36,41 +36,50 @@ textarea {
 .calendar {
     display: inline-block;
     text-align: center;
-    width: 900px;
+    width: 950px;
+    padding-left: 6%
 }
 
 
 .calendar-link {
-    margin-top: 20px;
-    width: 60px;
+    width: 65px;
     display: inline-block;
     padding: 1px;
     border-width: 0 3px 6px 3px;
     border-style: solid;
-    border-color: #aaa;
-    color: #aaa;
+    border-color: #ccc;
+    color: #ccc;
 }
 
 .calendar-link h3 {
     padding: 4px;
     margin: 4px;
 }
+
+.calendar-link a {
+    color: #ccc;
+}
+
+
 .calendar-link.active {
+    background-color: #ccc;
+}
+
+.calendar-link.active a {
     color: #006400;
-    background-color: #aaa;
 }
 
 .cal-button {
     width: 30px;
     height: 50px;
     color: #ccc;
-    margin-top: 30px;
+    margin-top: 10px;
     font-size: 40px;
     margin-right: 20px;
 }
 
 .cal-button:hover {
-    color: #aaa;
+    color: #ccc;
 }
 
 .nav-main-list {
@@ -105,7 +114,7 @@ textarea {
 }
 
 .input-row .floating-buttons span:hover, .input-row .glyphicon-trash:hover {
-    background-color: #aaa;
+    background-color: #ccc;
 }
 
 .totals {
