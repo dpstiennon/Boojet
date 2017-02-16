@@ -23,10 +23,15 @@ textarea {
     background-color: #006400;
 }
 
-.header-icon span {
+.header-icon {
     color: #ccc ;
     font-size: 40pt;
 }
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: #006400; 
+}
+
 
 .calendar li {
     display: inline-block;
@@ -58,6 +63,11 @@ textarea {
 
 .calendar-link a {
     color: #ccc;
+}
+
+.dropdown.open {
+    color: #006400;
+    background-color: #ccc;
 }
 
 
