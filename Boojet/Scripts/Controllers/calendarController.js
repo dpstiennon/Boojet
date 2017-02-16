@@ -1,11 +1,13 @@
 ﻿(function() {
-    var calendarController = function() {
-        this.year = Number(this.year);
-        this.month = Number(this.month);
+    var calendarController = function(urlParams) {
+        this.userId = urlParams.getUserId();
+        this.year = urlParams.getYear();
+        this.month = urlParams.getMonth();
         this.currentDate = new Date(this.year, this.month - 1);
         this.monthsToShow = 12;
         this.dates = this.buildDateList();
     };
+
 
     calendarController.prototype.buildDateList = function() {
         var months = [this.currentDate];
@@ -50,6 +52,10 @@
 
     calendarController.prototype.monthString = function(myDate) {
         return myDate.toLocaleString('en-us', { month: "short" });
+    }
+
+    calendarController.prototype.isCurrent = function(date) {
+        return this.currentDate.getTime() === date.getTime();
     }
 
     angular.module('boojet')

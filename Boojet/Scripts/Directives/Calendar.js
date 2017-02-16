@@ -1,10 +1,7 @@
 ﻿(function() {
     angular.module("boojet").directive("calendar", function() {
         return {
-            scope: {
-                year: '@',
-                month: '@'
-            },
+            scope: { },
             restrict: 'E',
             templateUrl: '/Scripts/Templates/Calendar.html',
             controller: 'CalendarController',

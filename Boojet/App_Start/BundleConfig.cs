@@ -32,7 +32,8 @@ namespace Boojet
             bundles.Add(new ScriptBundle("~/bundles/app")
                 .IncludeDirectory("~/Scripts/Models", "*.js")
                 .IncludeDirectory("~/Scripts/Controllers", "*.js")
-                .IncludeDirectory("~/Scripts/Directives", "*.js"));
+                .IncludeDirectory("~/Scripts/Directives", "*.js")
+                .IncludeDirectory("~/Scripts/Services", "*.js"));
         }
     }
 }
